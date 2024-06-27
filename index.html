@@ -1,43 +1,20 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Text File Modifier</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="LaRosa.png" />
+  <link rel="stylesheet" href="style.css">
+  <title>LaRosa TXT File Modifier</title>
 </head>
 <body>
-    <h1>Upload a text file</h1>
+    <h1>LaRosa TXT File Modifier</h1>
     <form id="upload-form">
-        <input type="file" id="fileInput" name="file" accept=".txt" required>
-        <button type="submit">Upload and Modify</button>
+        <div class="file"><input type="file" id="fileInput" name="file" accept=".txt" required></div>
+        
+        <div class="button"><button type="submit">Upload and Modify</button></div>
     </form>
     <a id="download-link" style="display:none;">Download Modified File</a>
 
-    <script>
-        document.getElementById('upload-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const fileInput = document.getElementById('fileInput');
-            const file = fileInput.files[0];
-            
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const content = e.target.result;
-                    const modifiedContent = content.replace(/hi/g, 'HI');
-                    
-                    const blob = new Blob([modifiedContent], { type: 'text/plain' });
-                    const url = URL.createObjectURL(blob);
-                    
-                    const downloadLink = document.getElementById('download-link');
-                    downloadLink.href = url;
-                    downloadLink.download = 'newfile.txt';
-                    downloadLink.style.display = 'block';
-                    downloadLink.innerText = 'Download Modified File';
-                };
-                reader.readAsText(file);
-            } else {
-                alert('Please upload a text file.');
-            }
-        });
-    </script>
+    <script src="modify.js"></script>
 </body>
 </html>
