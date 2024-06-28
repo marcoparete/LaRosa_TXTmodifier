@@ -22,7 +22,7 @@ document.getElementById('upload-form').addEventListener('submit', function(event
                             parts[2] = "LBG EST";
                         }
                         if (parts[6].includes('02-6000')){
-                            parts[2] = "LBGWages";
+                            parts[2] = "LBGOH";
                         }
                         if (parts[6].includes('02-6095')){
                             parts[2] = "LBG BD";
@@ -31,10 +31,10 @@ document.getElementById('upload-form').addEventListener('submit', function(event
                             parts[2] = "LBGSales";
                         }
                         if (parts[6].includes('07-6298')){
-                            parts[2] = "LBG SHOP";
+                            parts[2] = "LEG SHOP";
                         }
                         if (parts[6].includes('07-6020')){
-                            parts[2] = "LEG SHOP";
+                            parts[2] = "LEG EST";
                         }
                         [parts[8], parts[9]] = [parts[9], parts[8]];
                         if (parts[7].includes('O')) {
