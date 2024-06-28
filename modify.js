@@ -18,6 +18,24 @@ document.getElementById('upload-form').addEventListener('submit', function(event
                         
                     if(parts.length > 7){
                         parts.push();
+                        if (parts[6].includes('02-6020')){
+                            parts[2] = "LBG EST";
+                        }
+                        if (parts[6].includes('02-6000')){
+                            parts[2] = "LBGWages";
+                        }
+                        if (parts[6].includes('02-6095')){
+                            parts[2] = "LBG BD";
+                        }
+                        if (parts[6].includes('02-6098')){
+                            parts[2] = "LBGSales";
+                        }
+                        if (parts[6].includes('07-6298')){
+                            parts[2] = "LBG SHOP";
+                        }
+                        if (parts[6].includes('07-6020')){
+                            parts[2] = "LEG SHOP";
+                        }
                         [parts[8], parts[9]] = [parts[9], parts[8]];
                         if (parts[7].includes('O')) {
                             parts[8] = parts[7]
@@ -48,6 +66,7 @@ document.getElementById('upload-form').addEventListener('submit', function(event
                     ["SHOP", "FIELD"],
                     ["VAC", "PTO"],
                     ["HOL", "Holiday"],
+                    ["SALARY","SALARY TIME"],
                     ["BRANBR","E00036"],   
                     ["BRAVTR","E00052"], 
                     ["COLLGA","E00037"], 
