@@ -20,26 +20,27 @@ document.getElementById('upload-form').addEventListener('submit', function(event
                         parts.push();
                         if (parts[6].includes('02-6020')){
                             parts[2] = "LBG EST";
-                            parts[5] = "6020";
+                            parts[4] = "6020";
                         }
                         if (parts[6].includes('02-6000')){
                             parts[2] = "LBGOH";
-                            parts[5] = "6000";
+                            parts[4] = "6000";
                         }
                         if (parts[6].includes('02-6095')){
                             parts[2] = "LBG BD";
-                            parts[5] = "6095";
+                            parts[4] = "6095";
                         }
                         if (parts[6].includes('02-6098')){
                             parts[2] = "LBGSales";
+                            parts[4] = "6098";
                         }
                         if (parts[6].includes('07-6298')){
                             parts[2] = "LEG SHOP";
-                            parts[5] = "6298";
+                            parts[4] = "6298";
                         }
                         if (parts[6].includes('07-6020')){
                             parts[2] = "LEG EST";
-                            parts[5] = "6020";
+                            parts[4] = "6020";
                         }
                         [parts[8], parts[9]] = [parts[9], parts[8]];
                         if (parts[7].includes('O')) {
