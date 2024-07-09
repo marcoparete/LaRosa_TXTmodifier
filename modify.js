@@ -42,6 +42,14 @@ document.getElementById('upload-form').addEventListener('submit', function(event
                             parts[2] = "LEG EST";
                             parts[4] = "6020";
                         }
+                        if (parts[6].includes('07-6199')){
+                            parts[2] = "LEGEQ";
+                            parts[4] = "MISC EQUIP";
+                        }
+                        if (parts[6].includes('07-6302')){
+                            parts[2] = "LEGED";
+                            parts[4] = "6302";
+                        }
                         [parts[8], parts[9]] = [parts[9], parts[8]];
                         if (parts[7].includes('O')) {
                             if(parts[7].includes('2')){
