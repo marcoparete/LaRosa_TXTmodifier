@@ -65,7 +65,7 @@ document.getElementById('upload-form').addEventListener('submit', function(event
                                 parts[8] =  "OG8 - Mechanic";
                             }
                             if(parts[7].includes('9')){
-                                parts[8] =  "OG9 - Loader 3-7CY/Skid Steer";
+                                parts[8] =  "OG9 - Loader -3CY/Skid Steer";
                             }
                             if(parts[7].includes('11')){
                                 parts[8] =  "OG11 - Earth Roller";
