@@ -44,19 +44,40 @@ document.getElementById('upload-form').addEventListener('submit', function(event
                         }
                         [parts[8], parts[9]] = [parts[9], parts[8]];
                         if (parts[7].includes('O')) {
-                            parts[8] = parts[7]
+                            if(parts[7].includes('2')){
+                                parts[8] =  "OG2B - Excavator + 2CY";
+                            }
+                            if(parts[7].includes('3')){
+                                parts[8] =  "OG3 - Dozer Finegrade";
+                            }
+                            if(parts[7].includes('6')){
+                                parts[8] =  "OG6 - Loader 3-7CY/Dozer Rough";
+                            }
+                            if(parts[7].includes('8')){
+                                parts[8] =  "OG8 - Mechanic";
+                            }
+                            if(parts[7].includes('9')){
+                                parts[8] =  "OG9 - Loader 3-7CY/Skid Steer";
+                            }
+                            if(parts[7].includes('11')){
+                                parts[8] =  "OG11 - Earth Roller";
+                            }
                             parts[7] = "Operator";
                         }
                         if (parts[7].includes('L')) {
-                            parts[8] = "F1 - Laborer 1"
+                            parts[8] = "F1 - Laborer 1";
                             parts[7] = "Laborer";
                         }
                         if (parts[7].includes('C')) {
-                            parts[8] = "CF1 - Concrete Finisher"
+                            parts[8] = "CF1 - Concrete Finisher";
                             parts[7] = "Masonry";
                         }
                         if (parts[7].includes('D')) {
-                            parts[8] = "F1 - Driver 1"
+                            parts[8] = "F1 - Driver 1";
+                            parts[7] = "Driver";
+                        }
+                        if (parts[7].includes('M')) {
+                            parts[8] = "F2 - Mechanic 1";
                             parts[7] = "Driver";
                         }
                         [parts[5],parts[6]] = [parts[6],parts[5]];
